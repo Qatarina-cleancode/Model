@@ -1,2 +1,2 @@
 # Model
-An analytic model
+An analytic model that predicts diabetes risk
