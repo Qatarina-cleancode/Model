@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import joblib 
 #Generate seed data
 np.random.seed(42)
 n=400 #Generate 400 records
@@ -44,6 +45,7 @@ print( f"Overall Accuracy is: " f"{accuracy_score(y_test, y_pred) * 100:.2f}%")
 print("confusion Matrix:\n",confusion_matrix(y_test,y_pred))
 print("\n classification Model:\n",classification_report(y_test,y_pred))
 
-
- 
+#saving the model
+joblib.dump(model, 'diabetes_model.joblib')
+print("Model saved successfully as diabetes_model.joblib")
 
